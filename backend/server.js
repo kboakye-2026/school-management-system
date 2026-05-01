@@ -8,8 +8,7 @@ require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-const db = new Database('school.db');
-
+const db = new Database('/tmp/school.db');
 // Create all tables
 db.exec(`
     CREATE TABLE IF NOT EXISTS users (
